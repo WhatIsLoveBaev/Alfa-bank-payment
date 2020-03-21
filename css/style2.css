@@ -1,0 +1,46 @@
+.wrapper_card_number {
+    justify-content: start;
+}
+.your_card {
+    display: flex;
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.2em;
+    color: #BEBEBE;
+}
+.wrapper_cvc_select {
+    align-items: center;
+}
+.close {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    position: absolute;
+    left: 88%;
+    top: 29%;
+    color: #999999;
+    cursor: pointer;
+}
+.wrapper_cvc {
+    width: 120px;
+    height: 36px;
+    background: #FFFFFF;
+    border-bottom: 0;
+    border: 1px solid #BEBEBE;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+}
+.cvc {
+    width: 100%;
+    border-bottom: 0;
+    text-align: center;
+}
+.cvc::placeholder {
+    color: #BEBEBE;
+    text-align: center;
+}

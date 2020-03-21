@@ -1,0 +1,130 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    background: #FAFAFA;
+}
+.container {
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 344px;
+}
+.wrapper_header {
+    margin-top: 147px;
+    display: flex;
+    margin-bottom: 1%;
+}
+.btn_back {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    background-color: white;
+    border-radius: 50%;
+    display: none;
+}
+.btn_back span {
+    width: 12px;
+    height: 20px;
+    font-family: SF UI Display;
+    font-weight: bold;
+ }
+.h2_pay {
+    margin: 0 auto; 
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    color: #333333;
+    padding: 7.5px;
+}
+
+
+.wrapper_error_circle {
+    width: 80px;
+    height: 80px;
+/*     display: flex;
+    justify-content: center;
+    align-items: center; */
+    background: #E04F5F;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+.ex {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 47%;
+    top: 30%;
+  }
+  .ex:before, .ex:after {
+    position: absolute;
+/*     left: 12px; */
+    content: '';
+    height: 32px;
+    width: 6px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 90px;
+  }
+  .ex:before {
+    transform: rotate(45deg);
+  }
+  .ex:after {
+    transform: rotate(-45deg);
+  }
+
+.wrapper_info_error {
+    margin: 0 auto;
+    text-align: center;
+}
+.h2_error {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2D2D2D;
+    margin: 10px;
+}
+.p_error {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2D2D2D;
+    margin: 10px;
+}
+.btn_error_back {
+    border: 0;
+    width: 148px;
+    height: 40px;
+    color: white;
+    background: #EF5350;
+    border-radius: 66px;
+    margin: 0 auto;
+    margin-top: 1%;
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+@media (max-width:480px) {
+    .wrapper_header {
+        margin-top: 0px;
+    }
+    .btn_back {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        position: absolute;
+    } 
+}

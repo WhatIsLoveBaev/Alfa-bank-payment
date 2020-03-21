@@ -1,0 +1,336 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    background: #FAFAFA;
+}
+.container {
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 344px;
+}
+.wrapper_header {
+    margin-top: 147px;
+    display: flex;
+    margin-bottom: 1%;
+}
+.btn_back {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    background-color: white;
+    border-radius: 50%;
+    display: none;
+}
+.btn_back span {
+    width: 12px;
+    height: 20px;
+    font-family: SF UI Display;
+    font-weight: bold;
+ }
+.h2_pay {
+    margin: 0 auto; 
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    color: #333333;
+    padding: 7.5px;
+}
+.wrapper_info {
+    display: flex;
+    justify-content: space-between;
+    width: 344px;
+    height: 160px;
+    background: linear-gradient(179.62deg, #D8E4EA 0.75%, #FAFAFA 99.34%), linear-gradient(90deg, #536976 0%, #292E49 100%);
+    border-radius: 40px 40px 0px 0px;
+    margin: 0 auto;  
+}
+.wrapper_logo {
+    width: 30%;
+}
+.logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #EF5350;
+    background-image: url(../img/logo.jpg); 
+    background-size: cover;
+}
+.info {
+    display: flex;
+    width: 60%;
+    height: auto;
+    margin-top: 7%;
+    justify-content: center;
+}
+.wrapper_info_text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.wrapper_logo_a {
+    margin-top: 7%;
+    width: 15%;
+    height: 40%;
+    position: relative;
+}
+.logo-a {
+    background-image: url(../img/path134.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 23px;
+    height: 36px;
+    position: absolute;
+    top: 10%;
+}
+.description { 
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;    
+    color: #333333;
+}
+.amount {
+    font-family: SF UI Display;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 19px;
+    color: #333333;
+}
+.orderNumber {
+    font-family: SF UI Display;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 14px;
+color: #333333;
+
+}
+.form_payment {
+    width: 344px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+.wrapper_card_number {
+    height: 60px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_number {
+    border: 0;
+    width: 100%;
+    border-bottom: 1px solid #DDDDDD;
+    border-radius: 6px;
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #BEBEBE;
+}
+.card_number::placeholder {
+    color: #BEBEBE;
+}
+.wrapper_cvc_select {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 7%;
+}
+.wrapper_select {
+    width: 30%;
+    border-bottom: 1px solid #DDDDDD;
+    display: flex;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+.month, .year {
+    width: 100%;
+    border: 0;
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 1%;
+    color: #BEBEBE;
+}
+.wrapper_cvc {
+    width: 20%;
+    margin-right: 7%;
+    border: 0;
+}
+.cvc {
+    border: 0;
+    border-radius: 6px;
+    border-bottom: 1px solid #DDDDDD;
+    width: 100%;
+    text-align: center;
+}
+.cvc::placeholder {
+    color: #BEBEBE;
+}
+.wrapper_i {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 310px;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #999999;
+}
+.i_info {
+    position: absolute;
+    width: 227px;
+    height: 61px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    left: 110px;
+    top: 51px;
+    display: none;
+}
+.h2_i_info {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #222222;
+    margin: 15px;
+    padding: 0 3px 0 3px;
+}
+.close {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    position: absolute;
+    left: 88%;
+    top: 15%;
+    color: #999999;
+    cursor: pointer;
+}
+.span_close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+.wrapper_checkbox {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #999999;
+    position: absolute;
+    top: 120%;
+}
+.checkbox {
+    position: absolute;
+    opacity: 0; 
+}
+label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+.checkbox + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 22px;
+    background: #FFFFFF;
+    border: 1px solid #999999;
+    border-radius: 4px;
+}
+.checkbox:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    background: black;
+    width: 2px;
+    height: 2px;
+    box-shadow: 
+      2px 0 0 black,
+      4px 0 0 black,
+      4px -2px 0 black,
+      4px -4px 0 black,
+      4px -6px 0 black,
+      4px -8px 0 black;
+    transform: rotate(45deg);
+}
+.payment {
+    border: 0;
+    width: 148px;
+    height: 40px;
+    color: white;
+    background: #EF5350;
+    border-radius: 66px;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+.payment:active {
+    background: rgba(239, 83, 80, 0.6);
+}
+.session {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 70px;
+    margin: 0 auto;
+    color: #999999;
+}
+
+
+
+.maskedPan {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #BEBEBE;
+}
+
+
+
+
+@media (max-width:480px) {
+    .wrapper_header {
+        margin-top: 0px;
+    }
+    .btn_back {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        position: absolute;
+    } 
+}

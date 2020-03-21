@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../fonts/stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style3.css">
+    <title>Error</title>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper_header">
+            <div class="btn_back">
+                <span>&lt;</span>
+            </div>
+        <h3 class="h2_pay">Статус оплаты</h3>
+        </div>
+
+        <div class="wrapper_error_circle">
+            <div class="ex"></div>
+        </div>
+
+        <div class="wrapper_info_error">
+            <h2 class="h2_error">Ой, что-то пошло не так</h2>
+            <p class="p_error">Недостаточно средств</p>
+        </div>
+
+        <input value="Назад" type="button" id="buttonPayment" class="btn_error_back">
+
+    </div>
+
+    <form name="errorForm" action="#" method="post" id="errorForm">
+        <input type="hidden" id="language" value="ru" type="hidden">
+    </form>
+    
+    
+    
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        var lang = "ru";
+    </script>
+</body>
+</html>

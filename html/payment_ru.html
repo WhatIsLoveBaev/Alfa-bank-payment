@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../fonts/stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Payment</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="wrapper_header">
+        <div class="btn_back">
+            <span>&lt;</span>
+        </div>
+    <h3 class="h2_pay">Оплата</h3>
+    </div>
+    <div class="wrapper_info">
+        <div class="info">
+            <div class="wrapper_logo">
+                <div class="logo"></div>
+            </div>
+            <div class="wrapper_info_text">
+                <div id="amount" class="amount">120,<span style="color: #999999;">00 ₽</span></div>
+                <div id="description" class="description">SO_GURMAN</div>
+                <div id="orderNumber" class="orderNumber">№1442_164</div>
+            </div>
+        </div>
+        <div class="wrapper_logo_a">
+            <div class="logo-a"></div>
+        </div>
+    </div>
+
+    <form name="PaymentForm" action="#" method="post" id="formPayment" class="form_payment">
+        <input type="hidden" id="expiry">
+        <input type="hidden" id="mdOrder">
+        <input type="hidden" id="location" value="/../">
+        <input type="hidden" id="language" value="ru">
+
+        <div class="wrapper_card_number">
+            <input name="$PAN" id="iPAN" class="card_number" placeholder="Номер карты" maxlength="19" type="text" autocomplete="off" />
+        </div>
+        <div class="wrapper_cvc_select">
+            <div class="wrapper_select">
+                <select name="MM" id="month" class="month">
+                    <option value="" hidden>Месяц</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select> 
+            <span>/</span>
+            <select name="YYYY" id="year" class="year">
+                <option value="" hidden>Год</option>
+                <option value='2012'>2012</option>
+                <option value='2013'>2013</option>
+                <option value='2014'>2014</option>
+                <option value='2015'>2015</option>
+                <option value='2016'>2016</option>
+                <option value='2017'>2017</option>
+                <option value='2018'>2018</option>
+                <option value='2019'>2019</option>
+                <option value='2020'>2020</option>
+                <option value='2021'>2021</option>
+                <option value='2022'>2022</option>
+            </select>
+        </div>
+
+        <div class="wrapper_cvc">
+            <input name="$CVC" id="iCVC" class="cvc cvc_first_page" maxlength="3" placeholder="CVV/CVC" type="password" autocomplete="off" />
+        </div>  
+
+        <div class="wrapper_i">i</div>
+        <div class="i_info">
+            <h2 class="h2_i_info">3 последние цифры на обратной стороне карты</h2>
+            <div class="close">
+                <span class="span_close">&times;</span>
+            </div>
+        </div>
+        
+        <div class="wrapper_checkbox">
+            <input type="checkbox" name="check" id="check" class="checkbox">
+            <label for="check">Запомнить эту карту</label>
+        </div>
+        </div>
+    </form> 
+
+    <form id="acs" method="post" action="">
+        <input type="hidden" id="MD" name="MD"/>
+        <input type="hidden" id="PaReq" name="PaReq"/>
+        <input type="hidden" id="TermUrl" name="TermUrl"/>
+    </form>
+
+    <input value="Оплатить" type="button" id="buttonPayment" class="payment">
+
+    <p class="session">До окончания сессии 19:38</p>
+
+
+    <div id="errorBlock" style="color:red;"></div>
+
+    <div id="numberCountdown"></div>
+
+    <div id="infoBlock"></div>
+
+    <div id="indicator" style="display:none;"><img src="../../img/ajax-loader.gif" height="19" width="220" alt="indicator"></div>
+    
+</div>
+
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(document).payment({
+            language: "ru",
+            messageAjaxError: "Сервис временно недоступен. Попробуйте позднее.",
+            messageTimeRemaining: "До окончания сессии осталось #MIN#:#SEC#",
+            visualValidationEnabled: false,
+            agreementCheckboxEnabled: false,
+            bindingCheckboxEnabled: true,
+            getFeeEnabled:false
+        });
+    </script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
